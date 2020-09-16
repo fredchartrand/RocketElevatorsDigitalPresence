@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Rocket Elevators Quote</title>
+		<meta name="description" content="" />
+		<meta name="Author" content="Frederic Chartrand" />
+
+		<!-- mobile settings -->
+		<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+		<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+		<!-- WEB FONTS : use %7C instead of | (pipe) -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+		<!-- CORE CSS -->
+		<link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- REVOLUTION SLIDER -->
+		<link href="assets/plugins/slider.revolution.v5/css/pack.css" rel="stylesheet" type="text/css" />
+
+		<!-- THEME CSS -->
+		<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+		<!-- PAGE LEVEL SCRIPTS -->
+		<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/color_scheme/blue.css" rel="stylesheet" type="text/css" id="color_scheme" />
+	</head>
+
+	<!--
+		AVAILABLE BODY CLASSES:
+		
+		smoothscroll 			= create a browser smooth scroll
+		enable-animation		= enable WOW animations
+
+		bg-grey					= grey background
+		grain-grey				= grey grain background
+		grain-blue				= blue grain background
+		grain-green				= green grain background
+		grain-blue				= blue grain background
+		grain-orange			= orange grain background
+		grain-yellow			= yellow grain background
+		
+		boxed 					= boxed layout
+		pattern1 ... patern11	= pattern background
+		menu-vertical-hide		= hidden, open on click
+		
+		BACKGROUND IMAGE [together with .boxed class]
+		data-background="assets/images/_smarty/boxed_background/1.jpg"
+	-->
+	<body class="smoothscroll enable-animation">
+
+		<!-- wrapper -->
+		<div id="wrapper">
+
+			<!-- 
+				AVAILABLE HEADER CLASSES
+
+				Default nav height: 96px
+				.header-md 		= 70px nav height
+				.header-sm 		= 60px nav height
+
+				.b-0 		= remove bottom border (only with transparent use)
+				.transparent	= transparent header
+				.translucent	= translucent header
+				.sticky			= sticky header
+				.static			= static header
+				.dark			= dark header
+				.bottom			= header on bottom
+				
+				shadow-before-1 = shadow 1 header top
+				shadow-after-1 	= shadow 1 header bottom
+				shadow-before-2 = shadow 2 header top
+				shadow-after-2 	= shadow 2 header bottom
+				shadow-before-3 = shadow 3 header top
+				shadow-after-3 	= shadow 3 header bottom
+
+				.clearfix		= required for mobile menu, do not remove!
+
+				Example Usage:  class="clearfix sticky header-sm transparent b-0"
+			-->
+			<div id="header" class="navbar-toggleable-md sticky b-0 clearfix">
+				<!-- TOP NAV -->
+				<header id="topNav">
+					<div class="container">
+
+						<!-- Mobile Menu Button -->
+						<button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+							<i class="fa fa-bars"></i>
+						</button>
+
+							<!-- Logo -->
+							<a class="logo float-left" href="index.html">
+								<img src="images/R2.png" alt="" /> <!-- dark logo -->
+							</a>
+
+						<!-- 
+							Top Nav 
+							
+							AVAILABLE CLASSES:
+							submenu-dark = dark sub menu
+						-->
+						<div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+							<nav class="nav-main">
+
+								<!-- 
+									.nav-onepage
+									Required for onepage navigation links
+									
+									Add .external for an external link!
+								-->
+								<ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+									<li class="active"><!-- HOME -->
+										<a href="index.html">
+											HOME
+										</a>
+									</li>
+									<li><!-- SERVICES -->
+										<a href="index.html#services">
+											SERVICES
+										</a>
+									</li>
+									<li><!-- PORTFOLIO -->
+										<a href="index.html#portfolio">
+											PORTFOLIO
+										</a>
+									</li>
+									<li><!-- NEWS -->
+										<a href="index.html#news">
+											NEWS
+										</a>
+									</li>
+									<li><!-- CLIENTS -->
+										<a href="index.html#clients">
+											CLIENTS
+										</a>
+									</li>
+									<li><!-- CONTACT -->
+										<a href="index.html#contact">
+											CONTACT
+										</a>
+									</li>
+								</ul>
+
+							</nav>
+						</div>
+
+					</div>
+				</header>
+				<!-- /Top Nav -->
+
+				
+            </div>
+            
+                      
+			<div class="container pt-30 pb-30" id="elevator_calculator">
+
+				<div class="row">
+
+					<div class="col-md-8">
+
+						<div class="row">
+
+							<div class="col-sm-8 m-0">
+								<label class="fs-14">Building Type</label>
+								<select class="form-control" id="buildingType">
+									<option value="select">Select</option>
+                                    <option value="residential">Residential</option>
+                                    <option value="commercial">Commercial</option>
+                                    <option value="corporate">Corporate</option>
+                                    <option value="hybrid">Hybrid</option>
+								</select>	
+						
+								<hr>						
+							</div>
+							<!--  
+							<div class="col-md-4 mb-30">
+								<p>Please, choose a product.</p>
+								<input class ="fs-6" type="radio" value="7565" name="button">  Standard (10% fee)</input><br>
+								<input class ="fs-6" type="radio" value="12345" name="button">  Premium (13% fee)</input><br>
+								<input class ="fs-6" type="radio" value="15400" name="button">  Excelium (16% fee)</input><br>
+								<hr>
+							</div>
+						 -->
+							<div id="residential" class="building_type">
+								<label class ="fs-6" for="appartments_residential">The number of apartments in the building</label>
+                                <input type="text" onChange="residential()" class="form-control w-100" id="appartments_residential">
+                                <label class ="fs-6" for="floors_residential">The number of floors countained in the building</label>
+                                <input type="text" onChange="residential()" class="form-control w-100" id="floors_residential">
+                                <label class ="fs-6" for="basements_residential">The number of basements countained in the building</label> 
+								<input type="text" onChange="residential()" class="form-control w-100" id="basements_residential">
+								<label class ="fs-6" for="total_cages_residential">Number of cages required</label>  
+								<input type="number" id="total_cages_residential" readonly><br><br> 
+
+								
+								<p>Please, choose a product.</p>
+								<input class ="fs-6" type="radio" value="7565" name="resi">  Standard</input><br>
+								<input class ="fs-6" type="radio" value="12345" name="resi">  Premium</input><br>
+								<input class ="fs-6" type="radio" value="15400" name="resi">  Excelium</input><br>
+								<hr>
+							</div>
+
+							<div id="commercial" class="building_type">
+								<label class ="fs-6" for="business">The number of distinct business</label>
+                                <input type="text" class="form-control w-100" id="business">
+                                <label class ="fs-6" for="floors">The number of floors countained in the building</label>
+                                <input type="text" class="form-control w-100" id="floors">
+                                <label class ="fs-6" for="basements">The number of basements countained in the building</label> 
+                                <input type="text" class="form-control w-100" id="basements">      
+                                <label class ="fs-6" for="parking">The number of parking space available</label> 
+								<input type="text" class="form-control w-100" id="parking">
+								<label class ="fs-6" for="total_cages_commercial">The number of elevator cages to be deployed</label>
+								<input type="text" onChange="commercial()" class="form-control w-100" id="total_cages_commercial">
+								<label class ="fs-6" for="total_shafts_commercial">Number of elevator shafts to be deployed</label>  
+								<input type="number" id="total_shafts_commercial" readonly><br><br>
+
+								<p>Please, choose a product.</p>
+								<input class ="fs-6" type="radio" value="7565" name="commer">  Standard</input><br>
+								<input class ="fs-6" type="radio" value="12345" name="commer">  Premium</input><br>
+								<input class ="fs-6" type="radio" value="15400" name="commer">  Excelium</input><br>
+								<hr>
+							</div>
+
+							<div id="corporate" class="building_type">
+								<label class ="fs-6" for="companies">The number of seperate tenant companies</label>
+                                <input type="text" class="form-control w-100" id="companies">
+                                <label class ="fs-6" for="floors_corporate">The number of floors countained in the building</label>
+                                <input type="text" onChange="corporate()" class="form-control w-100" id="floors_corporate">
+                                <label class ="fs-6" for="basements_corporate">The number of basements countained in the building</label> 
+                                <input type="text" onChange="corporate()" class="form-control w-100" id="basements_corporate">      
+                                <label class ="fs-6" for="parking">The number of parking space available</label> 
+                                <input type="text" class="form-control w-100" id="parking">
+                                <label class ="fs-6" for="occupants_per_floors_corporate">The maximum number of occupants per floor</label> 
+								<input type="text" onChange="corporate()" class="form-control w-100" id="occupants_per_floors_corporate"> 
+								<label class ="fs-6" for="total_cages_corporate">Number of elevators cages needed</label>  
+								<input type="number" id="total_cages_corporate" readonly><br><br>
+
+								<p>Please, choose a product.</p>
+								<input class ="fs-6" type="radio" value="7565" name="corp">  Standard</input><br>
+								<input class ="fs-6" type="radio" value="12345" name="corp">  Premium</input><br>
+								<input class ="fs-6" type="radio" value="15400" name="corp">  Excelium</input><br>
+								<hr>
+							</div>
+
+							<div id="hybrid" class="building_type">
+								<label class ="fs-6" for="business">The number of distinct business</label>
+                                <input type="text" class="form-control w-100" id="business">
+                                <label class ="fs-6" for="floors_hybrid">The number of floors countained in the building</label>
+                                <input type="text" onChange="hybrid()" class="form-control w-100" id="floors_hybrid">
+                                <label class ="fs-6" for="basements_hybrid">The number of basements countained in the building</label> 
+                                <input type="text" onChange="hybrid()" class="form-control w-100" id="basements_hybrid">      
+                                <label class ="fs-6" for="parking">The number of parking space available</label> 
+                                <input type="text" class="form-control w-100" id="parking">
+                                <label class ="fs-6" for="occupants_per_floors_hybrid">The maximum number of occupants per floor</label> 
+                                <input type="text" onChange="hybrid()" class="form-control w-100" id="occupants_per_floors_hybrid">   
+                                <label class ="fs-6" for="hours">The maximum number of hours of activity of the building (max 24)</label> 
+								<input type="text" class="form-control w-100" id="hours">        
+								<label class ="fs-6" for="total_cages_hybrid">Number of elevators cages needed</label>  
+								<input type="number" id="total_cages_hybrid" readonly><br><br>  
+								
+								<p>Please, choose a product.</p>
+								<input class ="fs-6" type="radio" value="7565" name="hybri">  Standard</input><br>
+								<input class ="fs-6" type="radio" value="12345" name="hybri">  Premium</input><br>
+								<input class ="fs-6" type="radio" value="15400" name="hybri">  Excelium</input><br>
+								<hr>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="col-md-4 mb-30">
+
+						<table class="table fs-14 m-0">
+							<tbody>
+								<tr>
+									<td class="b-0 p-3">Elevator cost (Unit)</td>
+									<td class="b-0 p-3 text-right text-black fw-800">$ <input type="number" id="elevator_cost" readonly></td>
+								</tr>
+								<tr>
+									<td class="b-0 p-3">Installation fee Cost</td>
+									<td class="b-0 p-3 text-right text-black fw-800">$ <input type="number" id="installation_fee_cost" readonly></td>
+								</tr>
+								<tr>
+									<td class="b-0 p-3">Total cost</td>
+									<td class="b-0 p-3 text-right text-black fw-800">$ <input type="number" id="total_cost" readonly></td>
+								</tr>
+							</tbody>
+						</table>
+						<hr>
+						
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		
+		
+			
+		
+		<!-- Calc nb elevator-->
+		<script>
+
+			function residential()
+			{		
+					var appartments_residential = parseFloat(document.getElementById('appartments_residential').value);
+					var floors_residential = parseFloat(document.getElementById('floors_residential').value);	
+					var basements_residential = parseFloat(document.getElementById('basements_residential').value);
+
+					var ntotalfloors = floors_residential + basements_residential;
+					var result_columns = 1;	
+					var result_elevators = 1;					
+					result_columns = Math.ceil(ntotalfloors / 20);
+					result_elevators = Math.ceil(appartments_residential / floors_residential / 6) * result_columns;
+					total_cages_residential.value = result_elevators;
+			}
+
+			function commercial()
+			{
+					
+					// get the element needed
+					var total_cages_commercial = parseFloat(document.getElementById('total_cages_commercial').value);								
+					// update the read only input with the entered cages value
+					total_shafts_commercial.value = total_cages_commercial;
+			}
+
+			function corporate()
+			{
+					// get the elements needed
+					var occupants_per_floors_corporate = parseFloat(document.getElementById('occupants_per_floors_corporate').value);
+					var floors_corporate = parseFloat(document.getElementById('floors_corporate').value);
+					var basements_corporate = parseFloat(document.getElementById('basements_corporate').value);
+					// create the variables and do the calculation
+					var total_floors = floors_corporate + basements_corporate;
+					var columns = 1;
+					var elevators = 1;
+					var total_occupents = occupants_per_floors_corporate * total_floors;
+					var elev = Math.ceil(total_occupents / 1000);
+					columns = Math.ceil(total_floors / 20);
+					elevators = Math.ceil(elev / columns) * columns;
+					// update the read only input with the total
+					total_cages_corporate.value = elevators;			
+			}
+
+			function hybrid()
+			{
+					// get the elements needed
+					var occupants_per_floors_hybrid = parseFloat(document.getElementById('occupants_per_floors_hybrid').value);
+					var floors_hybrid = parseFloat(document.getElementById('floors_hybrid').value);
+					var basements_hybrid = parseFloat(document.getElementById('basements_hybrid').value);
+					// create the variables and do the calculation
+					var total_floors = floors_hybrid + basements_hybrid;
+					var columns = 1;
+					var elevators = 1;
+					var total_occupents = occupants_per_floors_hybrid * total_floors;
+					var elev = Math.ceil(total_occupents / 1000);
+					columns = Math.ceil(total_floors / 20);
+					elevators = Math.ceil(elev / columns) * columns;
+					// update the read only input with the total
+					total_cages_hybrid.value = elevators;						
+			}
+
+						
+			// calc elevator cost - fee - total
+			(function (){
+					var radios = document.getElementsByName('resi');
+							console.log(radios);
+							for(var i = 0; i < radios.length; i++){
+								radios[i].onclick = function(){
+									elevator_cost.value = this.value;
+									
+									if(this.value === "7565"){
+										installation_fee_cost.value = parseFloat((this.value * (10 / 100))).toFixed(2);
+										var installation_fee_cost_standard_total_resi = parseFloat(installation_fee_cost.value * parseFloat(total_cages_residential.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_cages_residential.value) + parseFloat(installation_fee_cost_standard_total_resi)).toFixed(2);
+									}
+									else if(this.value === "12345"){
+										installation_fee_cost.value = parseFloat((this.value * (13 / 100))).toFixed(2);
+										var installation_fee_cost_premium_total_resi = parseFloat(installation_fee_cost.value * parseFloat(total_cages_residential.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_cages_residential.value) + parseFloat(installation_fee_cost_premium_total_resi)).toFixed(2);
+									}
+									else if(this.value === "15400"){
+										installation_fee_cost.value = parseFloat((this.value * (16 / 100))).toFixed(2);
+										var installation_fee_cost_excelium_total_resi = parseFloat(installation_fee_cost.value * parseFloat(total_cages_residential.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_cages_residential.value) + parseFloat(installation_fee_cost_excelium_total_resi)).toFixed(2);
+									}
+
+								}
+								
+							}
+						})();
+
+
+			(function (){
+					var radios = document.getElementsByName('commer');
+							console.log(radios);
+							for(var i = 0; i < radios.length; i++){
+								radios[i].onclick = function(){								
+									elevator_cost.value = this.value;
+
+									if(this.value === "7565"){
+										installation_fee_cost.value = parseFloat((this.value * (10 / 100))).toFixed(2);
+										var installation_fee_cost_standard_total_commer = parseFloat(installation_fee_cost.value * parseFloat(total_shafts_commercial.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_shafts_commercial.value) + parseFloat(installation_fee_cost_standard_total_commer)).toFixed(2);
+									}
+									else if(this.value === "12345"){
+										installation_fee_cost.value = parseFloat((this.value * (13 / 100))).toFixed(2);
+										var installation_fee_cost_premium_total_commer = parseFloat(installation_fee_cost.value * parseFloat(total_shafts_commercial.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_shafts_commercial.value) + parseFloat(installation_fee_cost_premium_total_commer)).toFixed(2);
+									}
+									else if(this.value === "15400"){
+										installation_fee_cost.value = parseFloat((this.value * (16 / 100))).toFixed(2);
+										var installation_fee_cost_excelium_total_commer = parseFloat(installation_fee_cost.value * parseFloat(total_shafts_commercial.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_shafts_commercial.value) + parseFloat(installation_fee_cost_excelium_total_commer)).toFixed(2);
+									}
+								}
+								
+							}
+						})();
+
+
+			(function (){
+					var radios = document.getElementsByName('corp');
+							console.log(radios);
+							for(var i = 0; i < radios.length; i++){
+								radios[i].onclick = function(){
+									elevator_cost.value = this.value;
+									
+									if(this.value === "7565"){
+										installation_fee_cost.value = parseFloat((this.value * (10 / 100))).toFixed(2);
+										var installation_fee_cost_standard_corp_total = parseFloat(installation_fee_cost.value * parseFloat(total_cages_corporate.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_cages_corporate.value) + parseFloat(installation_fee_cost_standard_corp_total)).toFixed(2);
+									}
+									else if(this.value === "12345"){
+										installation_fee_cost.value = parseFloat((this.value * (13 / 100))).toFixed(2);
+										var installation_fee_cost_premium_corp_total = parseFloat(installation_fee_cost.value * parseFloat(total_cages_corporate.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_cages_corporate.value) + parseFloat(installation_fee_cost_premium_corp_total)).toFixed(2);
+									}
+									else if(this.value === "15400"){
+										installation_fee_cost.value = parseFloat((this.value * (16 / 100))).toFixed(2);
+										var installation_fee_cost_excelium_corp_total = parseFloat(installation_fee_cost.value * parseFloat(total_cages_corporate.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_cages_corporate.value) + parseFloat(installation_fee_cost_excelium_corp_total)).toFixed(2);
+									}
+									
+								}
+								
+							}
+						})();
+
+
+			(function (){
+					var radios = document.getElementsByName('hybri');
+							console.log(radios);
+							for(var i = 0; i < radios.length; i++){
+								radios[i].onclick = function(){
+									elevator_cost.value = this.value;
+
+									if(this.value === "7565"){
+										installation_fee_cost.value = parseFloat((this.value * (10 / 100))).toFixed(2);
+										var installation_fee_cost_standard_hybrid_total = parseFloat(installation_fee_cost.value * parseFloat(total_cages_hybrid.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_cages_hybrid.value) + parseFloat(installation_fee_cost_standard_hybrid_total)).toFixed(2);
+									}
+									else if(this.value === "12345"){
+										installation_fee_cost.value = parseFloat((this.value * (13 / 100))).toFixed(2);
+										var installation_fee_cost_premium_hybrid_total = parseFloat(installation_fee_cost.value * parseFloat(total_cages_hybrid.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_cages_hybrid.value) + parseFloat(installation_fee_cost_premium_hybrid_total)).toFixed(2);
+									}
+									else if(this.value === "15400"){
+										installation_fee_cost.value = parseFloat((this.value * (16 / 100))).toFixed(2);
+										var installation_fee_cost_excelium_hybrid_total = parseFloat(installation_fee_cost.value * parseFloat(total_cages_hybrid.value)).toFixed(2);
+										total_cost.value = parseFloat(this.value * parseFloat(total_cages_hybrid.value) + parseFloat(installation_fee_cost_excelium_hybrid_total)).toFixed(2);
+									}
+									
+								}
+
+							}
+						})();					
+					
+		</script>
+
+
+			 <script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+        	<script>
+                    $("#buildingType").change(function() {
+                    if ($(this).val() == "residential") {
+                        $('#residential').show();
+                        $('#otherField').attr('required', '');
+                        $('#otherField').attr('data-error', 'This field is required.');
+                    } else {
+                        $('#residential').hide();
+                        $('#otherField').removeAttr('required');
+                        $('#otherField').removeAttr('data-error');  
+                    }
+                    });
+                    $("#buildingType").trigger("change");
+
+                    
+                    
+                    $("#buildingType").change(function() {
+                    if ($(this).val() == "commercial") {
+                        $('#commercial').show();
+                        $('#otherField').attr('required', '');
+                        $('#otherField').attr('data-error', 'This field is required.');
+                    } else {
+                        $('#commercial').hide();
+                        $('#otherField').removeAttr('required');
+                        $('#otherField').removeAttr('data-error');  
+                    }
+                    });
+                    $("#buildingType").trigger("change");
+
+
+
+                    $("#buildingType").change(function() {
+                    if ($(this).val() == "corporate") {
+                        $('#corporate').show();
+                        $('#otherField').attr('required', '');
+                        $('#otherField').attr('data-error', 'This field is required.');
+                    } else {
+                        $('#corporate').hide();
+                        $('#otherField').removeAttr('required');
+                        $('#otherField').removeAttr('data-error');  
+                    }
+                    });
+                    $("#buildingType").trigger("change");
+
+
+
+                    $("#buildingType").change(function() {
+                    if ($(this).val() == "hybrid") {
+                        $('#hybrid').show();
+                        $('#otherField').attr('required', '');
+                        $('#otherField').attr('data-error', 'This field is required.');
+                    } else {
+                        $('#hybrid').hide();
+                        $('#otherField').removeAttr('required');
+                        $('#otherField').removeAttr('data-error');  
+                    }
+                    });
+                    $("#buildingType").trigger("change");
+
+			</script>
+		
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
+
+
+					<div class="row">
+
+					<!-- col #1 -->
+					<div class="col-md-8">
+
+						<h3 class="letter-spacing-1">WHY US?</h3>
+
+							<!-- Small Description -->
+							<p>
+							With over 46 years in the market, we know how to make the customer happy. Our certified technicians are the best at it, and they are ready to help. The customer is our #1 priority. Satisfaction guaranteed or your money back, no questions asked.
+							</p>
+							<h2>581-701-0303</h2>
+					</div>
+					<!-- /col #1 -->
+
+					<!-- col #2 -->
+					<div class="col-md-4">
+						<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+						<!-- Newsletter Form -->
+						<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+
+						<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+								<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+								<span class="input-group-btn">
+									<button class="btn btn-success" type="submit">Subscribe</button>
+								</span>
+							</div>
+						</form>
+						<!-- /Newsletter Form -->
+
+
+					</div>
+					<!-- /col #2 -->
+
+					</div>
+
+
+				</div>
+
+					<div class="copyright">
+						<div class="container">
+							<ul class="float-right m-0 list-inline mobile-block">
+								<li><a href="#">Terms &amp; Conditions</a></li>
+								<li>&bull;</li>
+								<li><a href="#">Privacy</a></li>
+							</ul>
+							&copy; All Rights Reserved, Company LTD
+						</div>
+					</div>
+
+			</footer>
+			<!-- /FOOTER -->
+
+	</body>
+</html>
