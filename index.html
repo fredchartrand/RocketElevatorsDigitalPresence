@@ -3,7 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Rocket Elevators</title>
-		<meta name="description" content="" />
+		<link rel="icon" href="images/favicon_rocket.ico">
+		<meta name="description" content=""/>
 		<meta name="Author" content="Frederic Chartrand" />
 
 		<!-- mobile settings -->
@@ -81,7 +82,7 @@
 
 				Example Usage:  class="clearfix sticky header-sm transparent b-0"
 			-->
-			<div id="header" class="navbar-toggleable-md sticky header-md clearfix ">
+			<div id="header" class="navbar-toggleable-md sticky header-md clearfix">
 
 				<!-- TOP NAV -->
 				<header id="topNav">
@@ -226,7 +227,7 @@
 							</div>
 
 							<div class="tp-caption sfb tp-resizeme"
-								data-x="400"
+								data-x="100"
 								data-y="410" 
 								data-speed="500"
 								data-start="1500"
@@ -449,7 +450,7 @@
 			
 
 
-			<!-- Parallax -->
+			<!-- Ribbon -->
 			<section class="parallax parallax-1" style="background-image: url('images/AdobeStock_103570025.jpeg');">
 				<div class="overlay dark-5"><!-- dark overlay [1 to 9 opacity] --></div>
 
@@ -464,7 +465,7 @@
 
 				</div>
 			</section>
-			<!-- /Parallax -->
+			<!-- /Ribbon -->
 
 
 
@@ -884,7 +885,7 @@
 								<img class="rounded" src="images/caroussel/serge.jpg" alt="" />
 							</figure>
 							<div class="testimonial-content p-0">
-								<p class="lead">As the head of the organisation, he is the one that makes this compagnies a succes.</p>
+								<p class="lead">As the head of the organisation, he is the one that makes this company a succes.</p>
 								<cite>
 									Serge Savoie
 									<span>CEO Of Rocket Elevators</span>
@@ -896,7 +897,7 @@
 								<img class="rounded" src="images/caroussel/fred.jpg" alt="" />
 							</figure>
 							<div class="testimonial-content p-0">
-								<p class="lead">With 10 years of experience as an employe for Rocket Elevators, he's able to fill your needs.</p>
+								<p class="lead">With 10 years of experience as an employe for Rocket Elevators, he's the right guy to fill your needs.</p>
 								<cite>
 									Frédéric Chartrand
 									<span>Employe Of The Month</span>
@@ -940,7 +941,9 @@
 							.owl-padding-15
 							.owl-padding-20
 					-->
+				
 					<div class="owl-carousel owl-padding-10 buttons-autohide controlls-over" data-plugin-options='{"singleItem": false, "items":"4", "autoPlay": 4000, "navigation": true, "pagination": false}'>
+						<!-- #1-->
 						<div class="img-hover">
 							<a href="https://www.cbsnews.com/news/in-home-elevator-accidents-causing-catastrophic-harm-to-kids/" target="_blank">
 								<img class="img-fluid" src="images/news/rsz_cbs.jpg" alt="">
@@ -955,6 +958,7 @@
 								</li>
 							</ul>
 						</div>
+						<!-- #2-->
 						<div class="img-hover">
 							<a href="https://www.cnn.com/2020/08/03/business/india-touchless-elevator-buttons-hnk-spc-intl/index.html" target="_blank">
 								<img class="img-fluid" src="images/news/rsz_cnn.jpg" alt="">
@@ -969,6 +973,7 @@
 								</li>							
 							</ul>
 						</div>
+						<!-- #3-->
 						<div class="img-hover">
 							<a href="https://www.msn.com/en-ca/news/canada/man-injured-after-elevator-free-falls-briefly-in-downtown-toronto-highrise/ar-BBYZMJq" target="_blank">
 								<img class="img-fluid" src="images/news/rsz_msn.jpg" alt="">
@@ -983,6 +988,7 @@
 								</li>
 							</ul>
 						</div>
+						<!-- #4-->
 						<div class="img-hover">
 							<a href="https://ici.radio-canada.ca/nouvelle/1117122/ascenseurs-toronto-inondation-pluie-reparation" target="_blank">
 								<img class="img-fluid" src="images/news/rsz_radio-canada.jpg" alt="">
@@ -998,6 +1004,7 @@
 								</li>
 							</ul>
 						</div>
+						<!-- #5-->
 						<div class="img-hover">
 							<a href="https://www.theglobeandmail.com/real-estate/the-market/article-auditors-report-reveals-ontarios-rising-elevator-woes/" target="_blank">
 								<img class="img-fluid" src="images/news/rsz_the-globe-and-mail.jpg" alt="">
@@ -1011,6 +1018,7 @@
 								</li>
 							</ul>
 						</div>
+						<!-- #6-->
 						<div class="img-hover">
 							<a href="https://www.tvanouvelles.ca/2017/09/19/un-travailleur-meurt-ecrase-par-un-ascenseur" target="_blank">
 								<img class="img-fluid" src="images/news/rsz_tva-nouvelles.png" alt="">
@@ -1113,63 +1121,17 @@
 
 					<header class="text-center mb-60">
 						<h2>Contact Us</h2>
-						<p class="lead font-lato">We will answers as fast as possible.</p>
+						<p class="lead font-lato">We will answer as fast as possible.</p>
 						<hr />
 					</header>
 
 
 					<div class="row">
 
-						<!-- FORM -->
+						<!-- FORM (Everything with a * need to have an input to submit) -->
 						<div class="col-md-8 col-sm-8">
 
 							<h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
-
-							
-							<!--
-								MESSAGES
-								
-									How it works?
-									The form data is posted to php/contact.php where the fields are verified!
-									php.contact.php will redirect back here and will add a hash to the end of the URL:
-										#alert_success 		= email sent
-										#alert_failed		= email not sent - internal server error (404 error or SMTP problem)
-										#alert_mandatory	= email not sent - required fields empty
-										Hashes are handled by assets/js/contact.js
-
-									Form data: required to be an array. Example:
-										contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
-										Also, add `required` to input fields if is a mandatory field. 
-										Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
-
-									PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
-												 ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
-
-									WARNING! Do not change the `email` and `name`!
-												contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-												contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
-							-->
-
-							<!-- Alert Success -->
-							<div id="alert_success" class="alert alert-success mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>Thank You!</strong> Your message successfully sent!
-							</div><!-- /Alert Success -->
-
-
-							<!-- Alert Failed -->
-							<div id="alert_failed" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>[SMTP] Error!</strong> Internal server error!
-							</div><!-- /Alert Failed -->
-
-
-							<!-- Alert Mandatory -->
-							<div id="alert_mandatory" class="alert alert-danger mb-30">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-								<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
-							</div><!-- /Alert Mandatory -->
-
 
 							<form id="contact_form">
 								<fieldset>

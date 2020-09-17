@@ -333,10 +333,11 @@
 				if (Math.abs(deltaY) > 1.2) {
 					deltaY *= options.stepSize / 120;
 				}
-
-				scrollArray(overflowing, -deltaX, -deltaY);
+				scrollArray(overflowing, -deltaX, -deltaY);	
+				window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, {passive: false});
+										
 			}
-
+			
 			/**
 			 * Keydown event handler.
 			 * @param {Object} event
@@ -559,6 +560,7 @@
 			addEvent("load", init);
 
 		}
+			
 
 	});
 })(jQuery);

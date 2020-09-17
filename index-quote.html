@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Rocket Elevators Quote</title>
+		<link rel="icon" href="images/favicon_rocket.ico">
 		<meta name="description" content="" />
 		<meta name="Author" content="Frederic Chartrand" />
 
@@ -153,7 +154,7 @@
 				
             </div>
             
-                      
+             <!-- form input/cost-->         
 			<div class="container pt-30 pb-30" id="elevator_calculator">
 
 				<div class="row">
@@ -174,15 +175,7 @@
 						
 								<hr>						
 							</div>
-							<!--  
-							<div class="col-md-4 mb-30">
-								<p>Please, choose a product.</p>
-								<input class ="fs-6" type="radio" value="7565" name="button">  Standard (10% fee)</input><br>
-								<input class ="fs-6" type="radio" value="12345" name="button">  Premium (13% fee)</input><br>
-								<input class ="fs-6" type="radio" value="15400" name="button">  Excelium (16% fee)</input><br>
-								<hr>
-							</div>
-						 -->
+							 
 							<div id="residential" class="building_type">
 								<label class ="fs-6" for="appartments_residential">The number of apartments in the building</label>
                                 <input type="text" onChange="residential()" class="form-control w-100" id="appartments_residential">
@@ -195,9 +188,9 @@
 
 								
 								<p>Please, choose a product.</p>
-								<input class ="fs-6" type="radio" value="7565" name="resi">  Standard</input><br>
-								<input class ="fs-6" type="radio" value="12345" name="resi">  Premium</input><br>
-								<input class ="fs-6" type="radio" value="15400" name="resi">  Excelium</input><br>
+								<input class ="fs-6" type="radio" value="7565" name="resi">  Standard (10% fee)</input><br>
+								<input class ="fs-6" type="radio" value="12345" name="resi">  Premium (13% fee)</input><br>
+								<input class ="fs-6" type="radio" value="15400" name="resi">  Excelium (16% fee)</input><br>
 								<hr>
 							</div>
 
@@ -216,9 +209,9 @@
 								<input type="number" id="total_shafts_commercial" readonly><br><br>
 
 								<p>Please, choose a product.</p>
-								<input class ="fs-6" type="radio" value="7565" name="commer">  Standard</input><br>
-								<input class ="fs-6" type="radio" value="12345" name="commer">  Premium</input><br>
-								<input class ="fs-6" type="radio" value="15400" name="commer">  Excelium</input><br>
+								<input class ="fs-6" type="radio" value="7565" name="commer">  Standard (10% fee)</input><br>
+								<input class ="fs-6" type="radio" value="12345" name="commer">  Premium (13% fee)</input><br>
+								<input class ="fs-6" type="radio" value="15400" name="commer">  Excelium (16% fee)</input><br>
 								<hr>
 							</div>
 
@@ -237,9 +230,9 @@
 								<input type="number" id="total_cages_corporate" readonly><br><br>
 
 								<p>Please, choose a product.</p>
-								<input class ="fs-6" type="radio" value="7565" name="corp">  Standard</input><br>
-								<input class ="fs-6" type="radio" value="12345" name="corp">  Premium</input><br>
-								<input class ="fs-6" type="radio" value="15400" name="corp">  Excelium</input><br>
+								<input class ="fs-6" type="radio" value="7565" name="corp">  Standard (10% fee)</input><br>
+								<input class ="fs-6" type="radio" value="12345" name="corp">  Premium (13% fee)</input><br>
+								<input class ="fs-6" type="radio" value="15400" name="corp">  Excelium (16% fee)</input><br>
 								<hr>
 							</div>
 
@@ -260,9 +253,9 @@
 								<input type="number" id="total_cages_hybrid" readonly><br><br>  
 								
 								<p>Please, choose a product.</p>
-								<input class ="fs-6" type="radio" value="7565" name="hybri">  Standard</input><br>
-								<input class ="fs-6" type="radio" value="12345" name="hybri">  Premium</input><br>
-								<input class ="fs-6" type="radio" value="15400" name="hybri">  Excelium</input><br>
+								<input class ="fs-6" type="radio" value="7565" name="hybri">  Standard (10% fee)</input><br>
+								<input class ="fs-6" type="radio" value="12345" name="hybri">  Premium (13% fee)</input><br>
+								<input class ="fs-6" type="radio" value="15400" name="hybri">  Excelium (16% fee)</input><br>
 								<hr>
 							</div>
 
@@ -270,7 +263,7 @@
 
 					</div>
 
-					<div class="col-md-4 mb-30">
+					<div id class="col-md-4 mb-30">
 
 						<table class="table fs-14 m-0">
 							<tbody>
@@ -295,22 +288,82 @@
 				</div>
 
 			</div>
+			<!-- form input/cost--> 
 
 		</div>
 
+				
+			<!-- FOOTER -->
+			<footer id="footer">
+				<div class="container">
 
-		
-		
-			
-		
-		<!-- Calc nb elevator-->
+
+					<div class="row">
+
+					<!-- col #1 -->
+					<div class="col-md-8">
+
+						<h3 class="letter-spacing-1">WHY US?</h3>
+
+							<!-- Small Description -->
+							<p>
+							With over 46 years in the market, we know how to make the customer happy. Our certified technicians are the best at it, and they are ready to help. The customer is our #1 priority. Satisfaction guaranteed or your money back, no questions asked.
+							</p>
+							<h2>581-701-0303</h2>
+					</div>
+					<!-- /col #1 -->
+
+					<!-- col #2 -->
+					<div class="col-md-4">
+						<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+
+						<!-- Newsletter Form -->
+						<p>Subscribe to Our Newsletter to get Important News & Offers</p>
+	
+						<form id ="subscribe" data-toastr-position="bottom-right">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+								<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
+								<span class="input-group-btn">
+									<button class="btn btn-success" type="submit">Subscribe</button>										
+								</span>
+							</div>
+							<span id="error_message" class="text-danger"></span>
+						</form>
+						<!-- /Newsletter Form -->
+
+
+					</div>
+					<!-- /col #2 -->
+
+					</div>
+
+				</div>
+
+					<div class="copyright">
+						<div class="container">
+							<ul class="float-right m-0 list-inline mobile-block">
+								<li><a href="#">Terms &amp; Conditions</a></li>
+								<li>&bull;</li>
+								<li><a href="#">Privacy</a></li>
+							</ul>
+							&copy; All Rights Reserved, Company LTD
+						</div>
+					</div>
+
+			</footer>
+			<!-- /FOOTER -->
+
+
+
+					<!-- Input calc for number of elevators-->
 		<script>
 
 			function residential()
 			{		
-					var appartments_residential = parseFloat(document.getElementById('appartments_residential').value);
-					var floors_residential = parseFloat(document.getElementById('floors_residential').value);	
-					var basements_residential = parseFloat(document.getElementById('basements_residential').value);
+					var appartments_residential = parseInt(document.getElementById('appartments_residential').value);
+					var floors_residential = parseInt(document.getElementById('floors_residential').value);	
+					var basements_residential = parseInt(document.getElementById('basements_residential').value);
 
 					var ntotalfloors = floors_residential + basements_residential;
 					var result_columns = 1;	
@@ -324,7 +377,7 @@
 			{
 					
 					// get the element needed
-					var total_cages_commercial = parseFloat(document.getElementById('total_cages_commercial').value);								
+					var total_cages_commercial = parseInt(document.getElementById('total_cages_commercial').value);								
 					// update the read only input with the entered cages value
 					total_shafts_commercial.value = total_cages_commercial;
 			}
@@ -332,17 +385,17 @@
 			function corporate()
 			{
 					// get the elements needed
-					var occupants_per_floors_corporate = parseFloat(document.getElementById('occupants_per_floors_corporate').value);
-					var floors_corporate = parseFloat(document.getElementById('floors_corporate').value);
-					var basements_corporate = parseFloat(document.getElementById('basements_corporate').value);
+					var occupants_per_floors_corporate = parseInt(document.getElementById('occupants_per_floors_corporate').value);
+					var floors_corporate = parseInt(document.getElementById('floors_corporate').value);
+					var basements_corporate = parseInt(document.getElementById('basements_corporate').value);
 					// create the variables and do the calculation
 					var total_floors = floors_corporate + basements_corporate;
 					var columns = 1;
 					var elevators = 1;
 					var total_occupents = occupants_per_floors_corporate * total_floors;
-					var elev = Math.ceil(total_occupents / 1000);
+					var nb_elev = Math.ceil(total_occupents / 1000);
 					columns = Math.ceil(total_floors / 20);
-					elevators = Math.ceil(elev / columns) * columns;
+					elevators = Math.ceil(nb_elev / columns) * columns;
 					// update the read only input with the total
 					total_cages_corporate.value = elevators;			
 			}
@@ -350,23 +403,24 @@
 			function hybrid()
 			{
 					// get the elements needed
-					var occupants_per_floors_hybrid = parseFloat(document.getElementById('occupants_per_floors_hybrid').value);
-					var floors_hybrid = parseFloat(document.getElementById('floors_hybrid').value);
-					var basements_hybrid = parseFloat(document.getElementById('basements_hybrid').value);
+					var occupants_per_floors_hybrid = parseInt(document.getElementById('occupants_per_floors_hybrid').value);
+					var floors_hybrid = parseInt(document.getElementById('floors_hybrid').value);
+					var basements_hybrid = parseInt(document.getElementById('basements_hybrid').value);
 					// create the variables and do the calculation
 					var total_floors = floors_hybrid + basements_hybrid;
 					var columns = 1;
 					var elevators = 1;
 					var total_occupents = occupants_per_floors_hybrid * total_floors;
-					var elev = Math.ceil(total_occupents / 1000);
+					var nb_elev = Math.ceil(total_occupents / 1000);
 					columns = Math.ceil(total_floors / 20);
-					elevators = Math.ceil(elev / columns) * columns;
+					elevators = Math.ceil(nb_elev / columns) * columns;
 					// update the read only input with the total
 					total_cages_hybrid.value = elevators;						
 			}
+		// Input calc for number of elevators end
 
-						
-			// calc elevator cost - fee - total
+			// I did it complicated... I know. 	I can't get it to reset the values automatically after switching building type		
+			// calc elevator cost - fee - total RESI
 			(function (){
 					var radios = document.getElementsByName('resi');
 							console.log(radios);
@@ -395,7 +449,7 @@
 							}
 						})();
 
-
+			// calc elevator cost - fee - total COMMER			
 			(function (){
 					var radios = document.getElementsByName('commer');
 							console.log(radios);
@@ -423,7 +477,7 @@
 							}
 						})();
 
-
+			// calc elevator cost - fee - total CORP			
 			(function (){
 					var radios = document.getElementsByName('corp');
 							console.log(radios);
@@ -452,7 +506,7 @@
 							}
 						})();
 
-
+			// calc elevator cost - fee - total HYBRID			
 			(function (){
 					var radios = document.getElementsByName('hybri');
 							console.log(radios);
@@ -479,23 +533,38 @@
 								}
 
 							}
-						})();					
+						})();	
+						
+						
+						// subscribe for letter reset/submit popup
+					$('form[id="subscribe"]').on('submit',function(){    
+					var email = $('#email').val();  
+					if(email == '')  
+					{  
+						$('#error_message').html("All Fields are required"); 
+						event.preventDefault();
+					}  
+					else  
+					{  
+						document.getElementById("subscribe").reset();
+						$('#error_message').html("");
+						alert('Thank you. You are now registered to our Newsletter');
+						event.preventDefault();						 					
+					}  
+				});
 					
 		</script>
 
 
-			 <script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+			<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
-        	<script>
+			<!-- Show/hide user input depending on the building type selection -->
+			<script>
                     $("#buildingType").change(function() {
                     if ($(this).val() == "residential") {
-                        $('#residential').show();
-                        $('#otherField').attr('required', '');
-                        $('#otherField').attr('data-error', 'This field is required.');
+                        $('#residential').show();				
                     } else {
                         $('#residential').hide();
-                        $('#otherField').removeAttr('required');
-                        $('#otherField').removeAttr('data-error');  
                     }
                     });
                     $("#buildingType").trigger("change");
@@ -505,12 +574,8 @@
                     $("#buildingType").change(function() {
                     if ($(this).val() == "commercial") {
                         $('#commercial').show();
-                        $('#otherField').attr('required', '');
-                        $('#otherField').attr('data-error', 'This field is required.');
                     } else {
-                        $('#commercial').hide();
-                        $('#otherField').removeAttr('required');
-                        $('#otherField').removeAttr('data-error');  
+                        $('#commercial').hide(); 
                     }
                     });
                     $("#buildingType").trigger("change");
@@ -520,12 +585,8 @@
                     $("#buildingType").change(function() {
                     if ($(this).val() == "corporate") {
                         $('#corporate').show();
-                        $('#otherField').attr('required', '');
-                        $('#otherField').attr('data-error', 'This field is required.');
                     } else {
-                        $('#corporate').hide();
-                        $('#otherField').removeAttr('required');
-                        $('#otherField').removeAttr('data-error');  
+                        $('#corporate').hide(); 
                     }
                     });
                     $("#buildingType").trigger("change");
@@ -535,78 +596,13 @@
                     $("#buildingType").change(function() {
                     if ($(this).val() == "hybrid") {
                         $('#hybrid').show();
-                        $('#otherField').attr('required', '');
-                        $('#otherField').attr('data-error', 'This field is required.');
                     } else {
-                        $('#hybrid').hide();
-                        $('#otherField').removeAttr('required');
-                        $('#otherField').removeAttr('data-error');  
+                        $('#hybrid').hide(); 
                     }
                     });
-                    $("#buildingType").trigger("change");
-
+					$("#buildingType").trigger("change");
+									
 			</script>
-		
-			<!-- FOOTER -->
-			<footer id="footer">
-				<div class="container">
-
-
-					<div class="row">
-
-					<!-- col #1 -->
-					<div class="col-md-8">
-
-						<h3 class="letter-spacing-1">WHY US?</h3>
-
-							<!-- Small Description -->
-							<p>
-							With over 46 years in the market, we know how to make the customer happy. Our certified technicians are the best at it, and they are ready to help. The customer is our #1 priority. Satisfaction guaranteed or your money back, no questions asked.
-							</p>
-							<h2>581-701-0303</h2>
-					</div>
-					<!-- /col #1 -->
-
-					<!-- col #2 -->
-					<div class="col-md-4">
-						<h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
-
-						<!-- Newsletter Form -->
-						<p>Subscribe to Our Newsletter to get Important News & Offers</p>
-
-						<form class="validate" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
-							<div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-								<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email">
-								<span class="input-group-btn">
-									<button class="btn btn-success" type="submit">Subscribe</button>
-								</span>
-							</div>
-						</form>
-						<!-- /Newsletter Form -->
-
-
-					</div>
-					<!-- /col #2 -->
-
-					</div>
-
-
-				</div>
-
-					<div class="copyright">
-						<div class="container">
-							<ul class="float-right m-0 list-inline mobile-block">
-								<li><a href="#">Terms &amp; Conditions</a></li>
-								<li>&bull;</li>
-								<li><a href="#">Privacy</a></li>
-							</ul>
-							&copy; All Rights Reserved, Company LTD
-						</div>
-					</div>
-
-			</footer>
-			<!-- /FOOTER -->
 
 	</body>
 </html>
